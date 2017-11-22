@@ -2,8 +2,8 @@
 /**
  * The template for displaying 404 pages (not found)
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package BLOC
+ * @since BLOC 1.0.0
  */
 
 get_header(); ?>

@@ -5,8 +5,8 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package BLOC
+ * @since BLOC 1.0.0
  */
 
 if ( have_comments() ) :
