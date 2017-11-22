@@ -1,108 +1,86 @@
+// Front page styling
+
+// Page image background
+body.home {
+	background-attachment: fixed;
+	background-blend-mode: multiply;
+	background-color: $dark-gray;
+	background-position: center top;
+	background-size: cover;
+	
+	@include breakpoint(small only) {background-image: url(../images/front/bg-1-small.jpg)}	
+	@include breakpoint(medium) {background-image: url(../images/front/bg-1-large.jpg)}
+	
+	&.bg-1 {
+		@include breakpoint(small only) {background-image: url(../images/front/bg-1-small.jpg)}	
+		@include breakpoint(medium) {background-image: url(../images/front/bg-1-large.jpg)}
+	}
+	
+	&.bg-2 {
+		@include breakpoint(small only) {background-image: url(../images/front/bg-2-small.jpg)}	
+		@include breakpoint(medium) {background-image: url(../images/front/bg-2-large.jpg)}
+	}
+	
+	&.bg-3 {
+		@include breakpoint(small only) {background-image: url(../images/front/bg-3-small.jpg)}	
+		@include breakpoint(medium) {background-image: url(../images/front/bg-3-large.jpg)}
+	}
+	
+	&.bg-4 {
+		@include breakpoint(small only) {background-image: url(../images/front/bg-4-small.jpg)}	
+		@include breakpoint(medium) {background-image: url(../images/front/bg-4-large.jpg)}
+	}
+	
+	&.bg-5 {
+		@include breakpoint(small only) {background-image: url(../images/front/bg-5-small.jpg)}	
+		@include breakpoint(medium) {background-image: url(../images/front/bg-5-large.jpg)}
+	}
+	
+	&.bg-6 {
+		@include breakpoint(small only) {background-image: url(../images/front/bg-6-small.jpg)}	
+		@include breakpoint(medium) {background-image: url(../images/front/bg-6-large.jpg)}
+	}
+	
+	&.bg-7 {
+		@include breakpoint(small only) {background-image: url(../images/front/bg-7-small.jpg)}	
+		@include breakpoint(medium) {background-image: url(../images/front/bg-7-large.jpg)}
+	}
+}
+
 // Page header
 .front-hero {
-  .marketing {
-    @include xy-grid-container(55rem);
-    @include xy-grid;
-  }
-
-  @include breakpoint(small) {
-    background: url('../images/demo/hero-bg-foundation-6-small.svg') bottom center;
-    background-size: cover;
-    background-position: bottom;
-    padding: rem-calc(65%) 0;
-    margin: 0 0 rem-calc(32);
-    height: auto;
-    position: relative;
-    text-align: left;
-  }
-
-  @include breakpoint(medium) {
-    background: url('../images/demo/hero-bg-foundation-6-large.svg') bottom center;
-    background-size: cover;
-    background-position: center;
-    height: rem-calc(685);
-    margin: 0 0 rem-calc(72);
-  }
-
-  .watch {
-    @include breakpoint(small) {
-      @include xy-cell(7);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(12);
-    }
-
-    a {
-      color: #B4C9D1;
-      cursor: pointer;
-      font-weight: 400;
-      margin-right: rem-calc(20);
-    }
-
-    a:hover {
-      color: #fff;
-    }
-
-    #stargazers {
-      :before {
-        content: "\f09b";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        color: #B4C9D1;
-        margin-right: rem-calc(8);
-      }
-    }
-
-    #twitter {
-      :before {
-        content: "\f099";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        color: #B4C9D1;
-        margin-right: rem-calc(8);
-      }
-    }
-
-  }
-
-  .tagline {
-    @include breakpoint(small) {
-      @include xy-cell(8);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(5);
-      padding-top: 6rem;
-    }
-  }
-
-  h1 {
-    color: #fff;
-    font-weight: 500;
-
-    @include breakpoint(small) {
-      font-size: 2.2rem;
-    }
-
-    @include breakpoint(medium) {
-      font-size: 2.875rem;
-    }
-  }
-
-  h4 {
-    color: #fefefe;
-    font-weight: 300;
-    font-size: 1.3125rem;
-  }
-
-  .download {
-    margin-top: rem-calc(20);
-  }
+	.marketing {
+		@include flex-grid-row();
+		
+		height: calc(100vh - 211px);
+		
+		align-items: center;
+	}
+	
+	.tagline {
+		@include grid-column(12);
+		
+		text-align: center;
+	}
+	
+	h1 {
+		color: #fff;
+		font-weight: 900;
+		
+		@include breakpoint(small) {
+			font-size: rem-calc(32);
+		}
+		
+		@include breakpoint(medium) {
+			font-size: rem-calc(44);
+		}
+	}
+	
+	h4 {
+		color: #fefefe;
+		font-weight: 300;
+		font-size: rem-calc(20);
+	}
 }
 
 // Intro
