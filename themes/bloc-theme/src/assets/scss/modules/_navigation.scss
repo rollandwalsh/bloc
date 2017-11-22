@@ -9,10 +9,6 @@
   @include show-for(medium);
 }
 
-// Site title
-.site-desktop-title a {
-  font-weight: bold;
-}
 
 // Mobile menu
 .mobile-menu {
@@ -52,6 +48,66 @@
 
 // Tablet and desktop menu
 
+.site-navigation {
+	@include flex-grid-row();
+	
+	padding: 0;
+	
+	align-items: center;
+}
+
+.top-bar-title {
+	padding: 0;
+	
+	img {
+		width: rem-calc(80);
+	}
+	
+	a {
+		padding: $global-padding / 2;
+		
+		display: block;
+	}
+}
+
+.top-bar-right {
+	align-self: stretch;
+	display: flex;
+	flex: 1; 
+}
+
+.desktop-menu {
+	width: 100%;
+	
+	align-self: stretch;
+	display: flex;
+	
+	li {
+		align-items: center;
+		align-self: stretch;
+		display: flex;
+		flex: 1 1 auto;
+		justify-content: center;
+	}
+	
+	a {
+		font-size: rem-calc(32);
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+		
+		align-self: center;
+		flex: 1 1 auto;
+		
+		transition: 150ms ease-in-out all;
+		
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+/*
 .top-bar {
 
   .top-bar-title a {
@@ -84,12 +140,9 @@
   .dropdown.menu .has-submenu.is-down-arrow > a::after { border: 0; }
   .dropdown.menu:first-child > li.is-dropdown-submenu-parent > a::after { display: none; }
 }
+*/
 
-.site-navigation {
-  @include breakpoint(small only) {
-    padding: 0; // prevents container visibility on small screens
-  }
-}
+
 
 // WP post navigation
 .post-navigation {

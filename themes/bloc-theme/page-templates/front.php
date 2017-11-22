@@ -4,7 +4,7 @@ Template Name: Front
 */
 get_header(); ?>
 
-<header class="front-hero" role="banner">
+<section class="front-hero" role="banner">
 	<div class="marketing">
 		<div class="tagline">
 			<h1><?php bloginfo( 'name' ); ?></h1>
@@ -12,7 +12,7 @@ get_header(); ?>
 			<a role="button" class="large button sites-button hide-for-small-only" href="#">Support Local Business</a>
 		</div>
 	</div>
-</header>
+</section>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
@@ -40,7 +40,7 @@ get_header(); ?>
 				<?php do_action( 'foundationpress_page_after_comments' ); ?>
 			</div>
 		</div>
-</section>
+	</section>
 <?php endwhile;?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
